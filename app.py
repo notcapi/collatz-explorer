@@ -2,6 +2,8 @@ import streamlit as st
 from collections import Counter
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 
 # --- Selector de idioma --- #
@@ -156,3 +158,29 @@ if st.button(txt["button"]):
         sequence.append(val)
 
     st.line_chart(sequence)
+
+    st.write("Este mapa de calor muestra cuántos pasos totales necesita cada número entre 1 y N para llegar a 1 en la conjetura de Collatz.")
+
+    st.subheader("🔥 Heatmap de pasos de Collatz")
+
+    max_n = st.slider("Rango máximo para el heatmap (1 a N)", min_value=10, max_value=500, value=100)
+
+    heat_data = []
+    for i in range(1, max_n + 1):
+        ops_i = collatz_operations(i)
+        div2_count = ops_i.count('D')
+        mult3_count = ops_i.count('M')
+        heat_data.append([i, div2_count, mult3_count, len(ops_i)])
+
+    df_heat = pd.DataFrame(heat_data, columns=["Número", "Divisiones entre 2", "Multiplicaciones 3n+1", "Total pasos"])
+    df_heat.set_index("Número", inplace=True)
+
+    st.write("#### Pasos por tipo de operación")
+    st.dataframe(df_heat)
+
+    st.write("#### Heatmap de pasos totales")
+
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    sns.heatmap(df_heat[["Total pasos"]].T, cmap="YlOrRd", cbar=True, ax=ax)
+    st.pyplot(fig)
