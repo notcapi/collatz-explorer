@@ -60,6 +60,25 @@ def train_classifier():
 # --- Interfaz Streamlit --- #
 
 st.title("🔢 Collatz Explorer")
+st.markdown("""
+La **conjetura de Collatz** es una famosa hipótesis matemática que dice que, si tomas cualquier número natural y aplicas estas reglas:
+- Si el número es par, lo divides entre 2.
+- Si es impar, lo multiplicas por 3 y le sumas 1.
+
+...eventualmente siempre llegarás al número 1, sin importar con qué número empieces.
+
+---
+
+### 🔎 ¿Qué hace esta app?
+
+Esta app:
+- Calcula la secuencia de Collatz para el número que introduzcas.
+- Analiza si la secuencia es *corta* o *larga*, según cuánto tarda en llegar a 1.
+- Muestra gráficamente cómo evoluciona la secuencia.
+- Usa inteligencia artificial para hacer predicciones basadas en los primeros pasos de la secuencia.
+
+""")
+
 st.write("Introduce un número natural y predice si su secuencia será larga o corta.")
 
 n = st.number_input("Número inicial", min_value=1, value=27)
