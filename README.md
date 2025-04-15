@@ -76,3 +76,49 @@ Y quién sabe… quizás aquí haya una pista para el futuro.
 ## ✍️ Autor
 
 Creado por [@notcapi](https://github.com/notcapi) como experimento de visualización matemática e IA.  
+
+---
+
+# 🇬🇧 Collatz Explorer (English)
+
+A web app that visualizes and predicts the behavior of the famous **Collatz conjecture** using AI.
+
+---
+
+## 📚 What is the Collatz Conjecture?
+
+It states that for any natural number:
+
+- If it’s even, divide it by 2.
+- If it’s odd, multiply by 3 and add 1.
+
+Repeating this will **always reach 1**, no matter the starting number.  
+Although tested for trillions of numbers, a general proof **still does not exist**.
+
+---
+
+## 💡 What does this app do?
+
+- Enter any number and generate its Collatz sequence
+- Predict whether the sequence is *long* or *short*
+- Graph its evolution
+- Show how many times it was divided or multiplied
+- Let you switch between English and Spanish
+
+---
+
+## ❓ Why is this relevant?
+
+This app brings a new perspective to Collatz using machine learning to **spot patterns early** in the sequence and provide insight into its complexity.
+
+---
+
+## 🎯 Try it now:
+
+👉 [https://collatz-explorer-xxxx.streamlit.app](https://collatz-explorer-xxxx.streamlit.app)
+
+---
+
+## 👤 Author
+
+Developed by [@notcapi](https://github.com/notcapi)
