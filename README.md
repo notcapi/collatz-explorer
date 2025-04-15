@@ -55,6 +55,23 @@ Esta aplicación te permite:
 
 ---
 
+## ❓ ¿Por qué esta app es relevante?
+
+Aunque la conjetura de Collatz ha sido verificada computacionalmente para billones de números, **nadie ha conseguido demostrar que funcione para todos los casos posibles**.
+
+La comunidad matemática aún no tiene una **demostración general** que garantice que cualquier número natural, sin importar su tamaño, acabará alcanzando el 1.
+
+Esta app no resuelve la conjetura, pero sí:
+
+- Detecta patrones ocultos en las secuencias.
+- Clasifica si un número tendrá una secuencia larga o corta **usando IA**.
+- Muestra gráficamente la evolución de cada número.
+- Analiza cuántas veces se divide o se multiplica por 3 y suma 1.
+
+📌 Todo esto aporta una mirada computacional e intuitiva a un problema todavía abierto.  
+Y quién sabe… quizás aquí haya una pista para el futuro.
+
+---
 
 ## ✍️ Autor
 
