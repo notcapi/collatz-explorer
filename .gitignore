@@ -1,0 +1,15 @@
+# Entornos virtuales
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Archivos temporales
+.DS_Store
+*.log
+
+# Jupyter/Colab
+.ipynb_checkpoints/
+
+# Datos generados (opcional, si no quieres subir CSVs)
+*.csv
