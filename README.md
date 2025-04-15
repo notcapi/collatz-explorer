@@ -51,7 +51,7 @@ Esta aplicación te permite:
 ## 🚀 Pruébalo tú mismo
 
 👉 Puedes probar la app en Streamlit aquí:  
-[https://collatz-explorer-mrw...streamlit.app](https://collatz-explorer-mrw...streamlit.app)
+[https://collatz-explorer-mrwnv5yscyoscq4hyxvikd.streamlit.app/](https://collatz-explorer-mrwnv5yscyoscq4hyxvikd.streamlit.app/)
 
 ---
 
