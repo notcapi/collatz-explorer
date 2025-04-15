@@ -115,7 +115,7 @@ This app brings a new perspective to Collatz using machine learning to **spot pa
 
 ## 🎯 Try it now:
 
-👉 [https://collatz-explorer-xxxx.streamlit.app](https://collatz-explorer-xxxx.streamlit.app)
+👉 [https://collatz-explorer-mrwnv5yscyoscq4hyxvikd.streamlit.app/](https://collatz-explorer-mrwnv5yscyoscq4hyxvikd.streamlit.app/)
 
 ---
 
