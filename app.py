@@ -10,10 +10,10 @@ def collatz_operations(n):
     ops = []
     while n != 1:
         if n % 2 == 0:
-            ops.append('D')
+            ops.append('D')  # D de dividir entre 2
             n //= 2
         else:
-            ops.append('M')
+            ops.append('M')  # M de multiplicar por 3 y sumar 1
             n = 3 * n + 1
     return ops
 
@@ -76,7 +76,6 @@ Esta app:
 - Analiza si la secuencia es *corta* o *larga*, según cuánto tarda en llegar a 1.
 - Muestra gráficamente cómo evoluciona la secuencia.
 - Usa inteligencia artificial para hacer predicciones basadas en los primeros pasos de la secuencia.
-
 """)
 
 st.write("Introduce un número natural y predice si su secuencia será larga o corta.")
@@ -93,6 +92,12 @@ if st.button("Analizar"):
     st.write(f"🔁 Longitud de la secuencia: {len(ops)} pasos")
     st.write(f"🧠 Early Score (40 pasos): {score}")
     st.write(f"📊 Clasificación: {'LARGA' if prediction == 1 else 'CORTA'} (mediana = {mediana})")
+
+    # Contar número de D y M
+    num_divisiones = ops.count('D')
+    num_multiplicaciones = ops.count('M')
+    st.write(f"➗ Divisiones entre 2: {num_divisiones}")
+    st.write(f"✖️ Multiplicaciones por 3 y suma 1: {num_multiplicaciones}")
 
     st.subheader("📈 Evolución de la secuencia")
     val = n

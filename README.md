@@ -1,25 +1,61 @@
-# Collatz Explorer
+# 🔢 Collatz Explorer
 
-Este proyecto explora la Conjetura de Collatz usando Python e inteligencia artificial. Se analizan las secuencias generadas desde distintos números y se detectan patrones de comportamiento, con especial atención a las secuencias anómalas que tardan más en converger.
+Esta aplicación explora de forma visual y con ayuda de la inteligencia artificial la famosa **Conjetura de Collatz**.
 
-## Contenido
+## 📚 ¿Qué es la conjetura de Collatz?
 
-- `collatz.py`: Generador de secuencias y guardado de datos.
-- `clasificador.py`: Clasificador que predice si una secuencia será larga, usando los primeros 40 pasos.
-- `data/`: Datos generados (`collatz_data.csv`).
-- `results/`: Resultados de análisis y visualización (si los generas).
+Es una hipótesis matemática que dice que, si tomas cualquier número natural y aplicas estas reglas:
 
-## Cómo usar
+- Si el número es **par**, lo divides entre 2.
+- Si es **impar**, lo multiplicas por 3 y le sumas 1.
 
-1. Instala dependencias:
+Y repites el proceso con el nuevo número...
 
-```bash
-pip install -r requirements.txt
+➡️ **Siempre acabarás llegando al número 1**, sin importar con qué número empieces.
 
-## Autor
+Ejemplo con el 6:
 
-Desarrollado por Borja Galván con ayuda de ChatGPT-4 en Cursor.
+6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1
 
 ---
 
-📂 [Repositorio en GitHub](https://github.com/notcapi/collatz-explorer)
+## 💡 ¿Qué hace esta app?
+
+Esta aplicación te permite:
+
+✅ Introducir un número natural y generar su **secuencia de Collatz**.  
+✅ Ver cuántos pasos tarda en llegar a 1.  
+✅ Saber cuántas veces se ha dividido entre 2 y cuántas veces se ha hecho `3n + 1`.  
+✅ Clasificar si la secuencia es **larga o corta** usando inteligencia artificial.  
+✅ Mostrar la evolución de la secuencia en un gráfico.  
+
+---
+
+## 🤖 ¿Cómo se usa la IA?
+
+- Se analizan los **primeros 40 pasos** de cada secuencia.
+- Se detectan patrones frecuentes (n-gramas de operaciones D y M).
+- Se entrena un modelo de regresión logística para predecir si una secuencia será larga o corta **sin tener que calcularla entera**.
+
+---
+
+## 📊 ¿Qué tecnologías usa?
+
+- `Python`
+- `Streamlit`
+- `scikit-learn`
+- `pandas`, `matplotlib`
+
+---
+
+## 🚀 Pruébalo tú mismo
+
+👉 Puedes probar la app en Streamlit aquí:  
+[https://collatz-explorer-mrw...streamlit.app](https://collatz-explorer-mrw...streamlit.app)
+
+---
+
+
+## ✍️ Autor
+
+Creado por [@notcapi](https://github.com/notcapi) como experimento de visualización matemática e IA.  
